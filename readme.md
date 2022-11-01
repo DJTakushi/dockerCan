@@ -1,6 +1,14 @@
 # About
 
-# 1.0 Getting Started
+# 1 Getting Started
+### 1.0 Upgrad WSL2 on Windows
+Run windows command prompt as Administrator, and execute:
+```
+wsl --update
+wsl --shutdown
+```
+
+
 ### 1.1 Build Docker container
 ```
 docker build . -t dc
@@ -8,11 +16,11 @@ docker build . -t dc
 
 ### 1.2 Run docker container
 ```
-docker run -it -v C:\Users\okina\dockerCan:/mnt/c/Users/okina dc /bin/bash
+docker run -it -v C:\Users\okina\dockerCan:/mnt/c/Users/okina/dockerCan --cap-add=NET_ADMIN dc /bin/bash
 ```
 
 ### 1.3 Install dependencies
-Run `/kbi.sh` (kernel-build-installs)
+~~Run `/kbi.sh` (kernel-build-installs)~~
 
 ### 1.4 Build the latest kernel with can support
 See https://github.com/microsoft/WSL/issues/5533 
